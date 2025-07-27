@@ -8,7 +8,7 @@ const Countries = () => {
   // Fetch countries data from an API or local source
   useEffect(() => {
     // fetch("https://restcountries.com/v3.1/all")
-    fetch("https://restcountries.com/v3.1/all?fields=name")
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags")
       .then((res) => res.json())
       // .then((data) => console.log(data));
       .then((data) => setCountries(data));

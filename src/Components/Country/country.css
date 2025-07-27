@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between ;
+  align-items: center  ;
+  gap: 1rem;
+  padding: 1rem;
+}
+.country {
+  border: 2px dotted rgb(255, 19, 19);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: rgb(255, 230, 230);
+  color: black;
+}
