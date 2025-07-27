@@ -1,3 +1,4 @@
+import "./Cat.css";
 const Cat = ({ cat }) => {
   console.log(cat);
   return (
