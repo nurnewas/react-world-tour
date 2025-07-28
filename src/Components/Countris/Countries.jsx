@@ -5,6 +5,8 @@ import "./country.css";
 const Countries = () => {
   // data Rakbo
   const [countries, setCountries] = useState([]);
+  // visitedCountrys
+  const [visitedCountries, setVisitedCountries] = useState([]);
 
   // Fetch countries data from an API or local source
   useEffect(() => {
@@ -15,13 +17,23 @@ const Countries = () => {
       .then((data) => setCountries(data));
   }, []);
 
+  // visited Country Handel
+  const handleVisitedCountry = (country) => {
+    console.log("add this to visited list ");
+    console.log(country);
+  };
+
   return (
     <>
       <h1>Countries</h1>
       <p>Country are: {countries.length}</p>
       <div className="counties-container">
         {countries.map((country) => (
-          <Country key={country.cca3} country={country}></Country>
+          <Country
+            key={country.cca3}
+            country={country}
+            handleVisitedCountry={handleVisitedCountry}
+          ></Country>
         ))}
       </div>
     </>

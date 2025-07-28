@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./country.css";
 // import "../../Components/Cats/Cat/Cat.css"; // Assuming you want to use the same styles as Cat component
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountry }) => {
   // const { name, flags } = country;
   console.log("Received country:", country);
 
@@ -14,7 +14,7 @@ const Country = ({ country }) => {
 
   return (
     <>
-      <div className="country container">
+      <div className={`country container ${visited && "visited"}`}>
         <div className="text-start">
           <p>Country Name: {country?.name?.common}</p>
           <p>code: {country?.cca3}</p>
@@ -22,6 +22,7 @@ const Country = ({ country }) => {
             <p>Visited i Never Visit there</p>
           )}
           {/* <img>Flag: {country?.flags.png}</img> */}
+          <button onClick={handleVisitedCountry}>Marl Visited</button>
           <button onClick={handleVisited}>
             {visited ? "visited" : "Not visited"}
           </button>
