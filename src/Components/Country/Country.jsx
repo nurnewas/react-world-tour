@@ -18,9 +18,13 @@ const Country = ({ country }) => {
         <div className="text-start">
           <p>Country Name: {country?.name?.common}</p>
           <p>code: {country?.cca3}</p>
-          {(visited && <p>Visited </p>) || <p>Not Visited</p>}
+          {(visited && <p>Already I visited here </p>) || (
+            <p>Visited i Never Visit there</p>
+          )}
           {/* <img>Flag: {country?.flags.png}</img> */}
-          <button onClick={handleVisited}>Visited </button>
+          <button onClick={handleVisited}>
+            {visited ? "visited" : "Not visited"}
+          </button>
         </div>
         <div>
           <img
