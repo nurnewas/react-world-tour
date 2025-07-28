@@ -20,12 +20,14 @@ const Countries = () => {
   // visited Country Handel
   const handleVisitedCountry = (country) => {
     console.log("add this to visited list ");
-    console.log(country);
+    const newVisitedCountries = [...visitedCountries, country];
+    setVisitedCountries(newVisitedCountries);
   };
 
   return (
     <>
       <h1>Countries</h1>
+      <h3>Visited Country: {visitedCountries.length}</h3>
       <p>Country are: {countries.length}</p>
       <div className="counties-container">
         {countries.map((country) => (

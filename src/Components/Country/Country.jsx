@@ -22,9 +22,15 @@ const Country = ({ country, handleVisitedCountry }) => {
             <p>Visited i Never Visit there</p>
           )}
           {/* <img>Flag: {country?.flags.png}</img> */}
-          <button onClick={handleVisitedCountry}>Marl Visited</button>
+          <button
+            onClick={() => {
+              handleVisitedCountry(country?.name?.common);
+            }}
+          >
+            Marl Visited
+          </button>
           <button onClick={handleVisited}>
-            {visited ? "visited" : "Not visited"}
+            {visited ? "Not visited" : "Visited"}
           </button>
         </div>
         <div>
