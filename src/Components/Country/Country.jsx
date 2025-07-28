@@ -8,7 +8,7 @@ const Country = ({ country }) => {
   const [visited, SetVisited] = useState(false);
 
   const handleVisited = () => {
-    SetVisited(true);
+    SetVisited(!visited);
     console.log("Visited:", country.name.common);
   };
 
